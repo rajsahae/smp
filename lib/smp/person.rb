@@ -22,6 +22,7 @@ module Smp
       if person.get_proposed_to_by(self)
         @fiance = person
       end
+      #return engaged?
     end
 
     def get_proposed_to_by(person)
@@ -29,13 +30,23 @@ module Smp
         @fiance = person
         return true
       else
-        if preferences.index(person.name) < preferences.index(fiance.name)
+        if better_choice?(person)
           @fiance.break_up
           @fiance = person
           return true
         end
       end
       return false
+    end
+
+    def better_choice?(person)
+      if person.kind_of? Person
+        pname = person.name
+      elsif person.kind_of? String
+        pname = person
+      end
+
+      preferences.index(pname) < preferences.index(fiance.name)
     end
 
     def break_up

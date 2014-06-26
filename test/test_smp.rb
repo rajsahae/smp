@@ -52,12 +52,17 @@ describe Smp do
   it "should match couples into a stable matching" do
     Smp.match_couples(men, women)
     Smp.stability(men, women).must_equal(true)
+  end
+  
+  it "should recognize an unstable matching" do
+    Smp.match_couples(men, women)
 
     # Swap fiance's to prove stability
     w1 = men['abe'].fiance
     w2 = men['bob'].fiance
-    men['abe'].instance_variable_set(:fiance, w2)
-    men['bob'].instance_variable_set(:fiance, w1)
+    men['abe'].instance_variable_set(:@fiance, w2)
+    men['bob'].instance_variable_set(:@fiance, w1)
+
 
     Smp.stability(men, women).must_equal(false)
   end
