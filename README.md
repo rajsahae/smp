@@ -1,6 +1,7 @@
 # Smp
 
-TODO: Write a gem description
+My implementation of the Stable Marriage Problem. I did most of it just by reading off the wikipedia page (http://en.wikipedia.org/wiki/Stable_marriage_problem)
+When I got stuck, I took some guidance/inspiration from (http://rosettacode.org/wiki/Stable_marriage_problem#Ruby) but my implementation has some small differences.
 
 ## Installation
 
@@ -18,7 +19,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+You can run the full test of the matching and stability algorithms with "rake test".
 
 ## Contributing
 
