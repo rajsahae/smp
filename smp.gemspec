@@ -8,8 +8,7 @@ Gem::Specification.new do |spec|
   spec.version       = Smp::VERSION
   spec.authors       = ["Raj Sahae"]
   spec.email         = ["rsahae@teslamotors.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.summary       = %q{Library for running the stable marriage problem}
   spec.homepage      = ""
   spec.license       = "MIT"
 
